@@ -1,0 +1,134 @@
+.topbarContainer {
+  height: 60px;
+  width: 100%;
+  background-color: #EF5455;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topbarLeft {
+  flex: 3;
+}
+
+.logo {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 50px;
+  margin-left: 30px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.topbarCenter {
+  flex: 5;
+}
+
+.searchbar {
+  width: 100%;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 22px !important;
+  margin-left: 10px;
+}
+
+.searchInput {
+  border: none;
+  font-size: 16px;
+  min-width: 45px;
+  width: 70%;
+  border-radius: 30px;
+}
+.searchInput:focus {
+    outline: none;
+  }
+
+
+.topbarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.topbarLink {
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+
+}
+
+.topbarIcons {
+  display: flex;
+}
+
+.topbarIconItem {
+  margin-right: 14px;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.topbarIconBadge {
+  width: 16px;
+  height: 16px;
+  background-color: #CCFBFE;
+  border-radius: 50%;
+  color: #000;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.topbarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+  object-fit: cover;
+  cursor: pointer;
+}      
+.mytooltip .mytext {
+  visibility: hidden;
+  
+  margin-left: -60px;
+  top:45px;
+  
+  position: absolute;
+}
+.mytooltip {
+  position: relative;
+}
+.mytooltip:hover .mytext{
+      visibility: visible;
+}
+.btnLogout{
+  font-size: 17px;
+  font-weight: 600;
+  width: 70px;
+  background-color: white;
+  color: red;
+  z-index: 1;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 0;
+  outline: none;
+  cursor: pointer;
+}
