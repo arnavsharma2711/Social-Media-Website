@@ -1,82 +1,124 @@
-# Relier - Social Media Website
+# 🌐 Relier – Social Media Website
 
-Relier is a social media website bulit using MERN stack.
-Relier is a real-world social media app which utilize REST API for login, register, and all CRUD operations along with a responsive messaging website which use react hooks, sending a private message with socket io, and saving data to MongoDB.
+**Relier** is a full-stack social media application built with the **MERN stack** (MongoDB, Express, React, Node.js). It includes real-time chat functionality via **Socket.io**, responsive UI with **Material UI**, and secure authentication using RESTful APIs. Users can register, log in, post content, view profiles, and message others privately — just like a real social platform! 💬🚀
 
-## Deployment
+---
 
-The link will  be available soon.
+## 🚀 Deployment
 
-## Screenshot
+> 🔗 **Live site coming soon... Stay tuned!**
 
-- Home Page 
-![Home Page](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/1.Home%20Page.png?raw=true "Home Page ")
-- Adding New Post 
-![Adding New Post ](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/2.New%20Post.png?raw=true "Adding New Post ")
-- Profile Page 
-![Profile Page](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/3.Profile%20Menu.png?raw=true "Profile Page")
-- Login Page 
-![Login Page](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/4.Login%20Page.png?raw=true "Login Page")
-- Register Page 
-![Register Page](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/5.Register%20Page.png?raw=true "Register Page")
-- Mesesnger
-![Mesesnger](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/6.Mesesnger%20Menu.png?raw=true "Mesesnger")
-- Chats 
-![Chats](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/7.Chats.png?raw=true "Chats")
+---
 
-## Prerequisite
-* You must have [node.js](https://nodejs.org/en/download/) installed in your system.
+## 📸 Screenshots
 
-* Add a .env file in the api/ and enter the following line according to your database.
+| Feature | Preview |
+|--------|---------|
+| 🏠 Home Page | ![Home](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/1.Home%20Page.png?raw=true) |
+| ➕ New Post | ![Add Post](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/2.New%20Post.png?raw=true) |
+| 👤 Profile Page | ![Profile](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/3.Profile%20Menu.png?raw=true) |
+| 🔐 Login Page | ![Login](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/4.Login%20Page.png?raw=true) |
+| 📝 Register Page | ![Register](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/5.Register%20Page.png?raw=true) |
+| 💬 Messenger | ![Messenger](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/6.Mesesnger%20Menu.png?raw=true) |
+| 💭 Chats | ![Chats](https://github.com/arnavsharma2711/Social-Media-Website/blob/main/Screenshot/7.Chats.png?raw=true) |
+
+---
+
+## ⚙️ Prerequisites
+
+- ✅ Install [Node.js](https://nodejs.org/en/download/)
+- ✅ Install [Postman](https://www.postman.com/) to test APIs and seed the database
+- ✅ Ensure MongoDB is accessible (via MongoDB Atlas or local setup)
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Environment Setup
+
+#### `api/.env`
 ```bash
-MONGO_URL = mongodb+srv://<username>:<password>@cluster0.nb0sm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+MONGO_URL=mongodb+srv://<username>:<password>@cluster0.nb0sm.mongodb.net/<database-name>?retryWrites=true&w=majority
 ```
->Replace **< password >** with the password for the **< username >** user and username from with your username.  Replace **myFirstDatabase** with the name of the database that connections will use by default.  Ensure any option params are  [URL encoded](https://dochub.mongodb.org/core/atlas-url-encoding).
+> Replace `<username>`, `<password>`, and `<database-name>` accordingly. Make sure options are [URL encoded](https://dochub.mongodb.org/core/atlas-url-encoding).
 
-* Add a .env file in the client/ and enter the following line according to your database.
-
+#### `client/.env`
 ```bash
-REACT_APP_PUBLIC_FOLDER = http://localhost:8800/images/
+REACT_APP_PUBLIC_FOLDER=http://localhost:8800/images/
 ```
-* Open api, client and socket folder separately and run the following command in command promt for every folder to add the nessarcy node_modules.
+
+---
+
+### 2. Install Dependencies
+
+In **each folder** (`api`, `client`, and `socket`), run:
+
 ```bash
 npm install
 ```
-or
+_or_
 ```bash
 yarn install
 ```
-## Add data to the database
-Install Postman and import the **social.postman_collection.json** file and add data useful for first time login.
->You need to keep running the server.
-## How to access the project
--   Open api, client and socket folder separately and run the following command in command promt for every folder.
+
+---
+
+### 3. Start the App
+
+Open three terminals (or use a process manager like `concurrently`) and run the following in each:
+
+#### API Server
 ```bash
+cd api
 yarn start
 ```
 
-## Synopsis of the project
+#### Client (Frontend)
+```bash
+cd client
+yarn start
+```
 
-The data will added soon.
+#### WebSocket Server
+```bash
+cd socket
+yarn start
+```
 
-## References
-* Node.js->\
-https://nodejs.org/en/docs/
-* React.js->\
-https://reactjs.org/docs/getting-started.html
-* React Router->\
-https://reactrouter.com/
-* Express->\
-https://expressjs.com/en/starter/installing.html
-* MonogoDB->\
-https://docs.mongodb.com/
-* Material UI->\
-https://mui.com/
-* Multer->\
-https://github.com/expressjs/multer#readme
-* Socket.io->\
-https://socket.io/docs/v4/
-* timeago.js->\
-https://github.com/hustcc/timeago.js#readme
+---
 
+### 4. Seed Initial Data (Optional)
 
+- Open Postman
+- Import the `social.postman_collection.json` file
+- Use the provided endpoints to register users, create initial posts, etc.
+
+> Make sure your backend server is running while using Postman.
+
+---
+
+## 🧠 Features at a Glance
+
+✨ *Detailed synopsis coming soon...* But here’s a quick teaser:
+
+- 🛡️ Auth: Register/Login via secure REST API
+- 📝 CRUD: Create/Edit/Delete posts
+- 💬 Realtime chat via Socket.io
+- 📸 Upload and serve media using Multer
+- 👤 View other users' profiles
+- ❤️ Like posts and interact with others
+- 📱 Responsive design with Material UI
+
+---
+
+## 📚 References & Tech Stack
+
+- **Node.js** → [nodejs.org](https://nodejs.org/en/docs/)
+- **React.js** → [reactjs.org](https://reactjs.org/docs/getting-started.html)
+- **React Router** → [reactrouter.com](https://reactrouter.com/)
+- **Express** → [expressjs.com](https://expressjs.com/en/starter/installing.html)
+- **MongoDB** → [mongodb.com](https://docs.mongodb.com/)
+- **Material UI** → [mui.com](https://mui.com/)
+- **Socket.io** → [socket.io/docs](https://socket.io/docs/v4/)
+- **Multer (File Uploads)** → [GitHub](https://github.com/expressjs/multer#readme)
+- **timeago.js** → [GitHub](https://github.com/hustcc/timeago.js#readme)
